@@ -1,0 +1,6 @@
+[submodule "lib/support/djangode"]
+	path = lib/support/djangode
+	url = git://github.com/simonw/djangode.git
+[submodule "lib/support/restler"]
+	path = lib/support/restler
+	url = git://github.com/danwrong/restler.git
