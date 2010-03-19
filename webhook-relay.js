@@ -8,7 +8,6 @@ var sys = require('sys'),
     http = require('http'),
     url_mod = require('url'),
     events = require('events'),
-    repl = require('repl'),
     rest = require('restler'),
     dj = require('djangode')
 ;
@@ -65,8 +64,6 @@ setInterval(function() {
     }
 }, 100); // Every tenth of a second
 
-repl.scope.last_req = 'None captured yet';
-
 var app = dj.makeApp([
     ['^/$', function(req, res) {
         var s = 'Server stats:\n\n';
@@ -102,5 +99,3 @@ var app = dj.makeApp([
     }]
 ]);
 dj.serve(app, PORT);
-
-repl.start("debug> ");
