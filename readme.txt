@@ -1,6 +1,8 @@
 webhook-relay
 =============
 
+    Status: Highly experimental, not actively maintained
+
 A Node.js server for forwarding webhook requests in a non-blocking
 manner.
 
@@ -22,3 +24,15 @@ application can safely block on the call to webhook-relay.
 webhook-relay also tracks statistics on the number of calls it 
 has made and how long they took to send.
 
+Usage from Python:
+
+    import urllib, json
+    
+    urllib.urlopen(
+        'http://localhost:8056/relay/', urllib.urlencode({
+            'url': 'http://www.postbin.org/13lam6a',
+            'data': json.dumps({'foo': 'bar', 'baz': 'bwaf'})
+        })
+    ).read()
+
+Then visit http://www.postbin.org/13lam6a to see what was posted.
