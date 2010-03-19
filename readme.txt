@@ -18,11 +18,22 @@ response sending agent. You send it an HTTP POST describing the
 webhook request that needs to be sent, it replies instantly with 
 an "OK", and the request itself is sent off shortly afterwards.
 
-webhook-relay should respond within 20-30ms, so your main 
+webhook-relay should respond within a few ms, so your main 
 application can safely block on the call to webhook-relay.
 
 webhook-relay also tracks statistics on the number of calls it 
 has made and how long they took to send.
+
+Installation:
+
+    git clone git://github.com/simonw/webhook-relay.git
+    cd webhook-relay
+    # Pull in dependencies: djangode and restler
+    git submodule init
+    git submodule update
+    
+    # Run the server:
+    node webhook-restler.js
 
 Usage from Python:
 
