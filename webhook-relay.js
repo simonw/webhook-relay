@@ -74,6 +74,7 @@ var app = dj.makeApp([
         ].forEach(function(key) {
             s += (key + ': ' + webhook_stats[key] + '\n');
         });
+        s += 'queue length: ' + webhook_queue.length + '\n';
         dj.respond(res, s, 'text/plain');
     }],
     ['^/relay/?$', function(req, res) {

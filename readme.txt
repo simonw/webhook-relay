@@ -22,7 +22,7 @@ webhook-relay should respond within a few ms, so your main
 application can safely block on the call to webhook-relay.
 
 webhook-relay also tracks statistics on the number of calls it 
-has made and how long they took to send.
+has made successfully.
 
 Installation:
 
@@ -46,4 +46,5 @@ Usage from Python:
         })
     ).read()
 
-Then visit http://www.postbin.org/13lam6a to see what was posted.
+Then visit http://www.postbin.org/13lam6a to see what was posted. You can 
+also visit http://localhost:8056/ to see basic webhook-relay statistics.
