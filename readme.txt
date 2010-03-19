@@ -6,10 +6,10 @@ webhook-relay
 A Node.js server for forwarding webhook requests in a non-blocking
 manner.
 
-Webhooks are brilliant, but implementing them as a provider is a 
-little tricky as your application has to make HTTP request to 
-arbitrary endpoints when specific actions occur. If there are 
-many of those endpoints and some of them are slow to respond, 
+http://www.webhooks.org/ are brilliant, but implementing them as a 
+provider is a little tricky as your application has to make HTTP 
+request to arbitrary endpoints when specific actions occur. If there 
+are many of those endpoints and some of them are slow to respond, 
 this could degrade the performance of your application.
 
 A common solution to this problem is to place outgoing webhook 
